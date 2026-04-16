@@ -160,7 +160,22 @@ For AI-powered features without local ML setup:
 
 ---
 
-## Extensions
+## Skills — Agent Frameworks
+
+Pith skills for agent runtimes and orchestration:
+
+| Skill | Framework | Status |
+|-------|-----------|--------|
+| [OpenClaw](./skills/openclaw/) | Orchestration agent runtime | Template |
+| [Hermes](./skills/hermes/) | Self-evolving agents | Template |
+| [CrewAI](./skills/crewai/) | Multi-agent orchestration | Template |
+| [AutoGen](./skills/autogen/) | Microsoft agent framework | Template |
+
+All frameworks can also use the **[Pith MCP Server](./extensions/mcp-server/)** for instant integration without framework-specific code. See [skills/README.md](./skills/README.md).
+
+---
+
+## Extensions — IDEs & Tools
 
 Community-built integrations for your favorite tools:
 
