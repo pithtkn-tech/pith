@@ -50,3 +50,4 @@ logs/
 *.duckdb
 *.duckdb.wal
 data/
+.github/workflows/

@@ -16,7 +16,7 @@ Strategies:
 9. Negative savings guard
 10. Auto language detection
 
-For AI-powered compression (LLMLingua-2, Tag Cloud Extraction),
+For AI-powered compression (LLMLingua-2, Pith Distill),
 see pithtoken.ai/docs or install: pip install pith[ml]
 """
 
@@ -805,7 +805,7 @@ def optimize_messages(
             seen_system.add(content_hash)
 
         # 2. Trim old assistant messages (basic truncation)
-        #    For AI-powered Tag Cloud compression, see pithtoken.ai
+        #    For AI-powered Pith Distill compression, see pithtoken.ai
         if role == "assistant" and i < len(messages) - 4:
             if len(content) > 120:
                 content = content[:100].rsplit(" ", 1)[0] + "..."

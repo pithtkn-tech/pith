@@ -150,7 +150,7 @@ X-Pith-Optimize-Ms: 0.45
 
 For AI-powered features without local ML setup:
 
-- **Tag Cloud Extraction** — Progressive scored tag compression (patent pending)
+- **Pith Distill** — Proprietary conversation compression
 - **LLMLingua-2** — AI prompt compression on our infrastructure
 - **DeBERTa** — ML injection detection, continuously improved
 - **Dashboard** — Real-time analytics, spend tracking, injection logs

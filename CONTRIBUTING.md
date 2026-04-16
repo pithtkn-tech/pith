@@ -58,7 +58,7 @@ Keep PRs focused on a single change. Include tests for new patterns.
 ## What stays closed
 
 These components are proprietary (Pith Cloud):
-- Tag Cloud Extraction algorithm
+- Pith Distill compression algorithm
 - ML model fine-tuning and training data
 - Dashboard and analytics backend
 - Billing and authentication systems
