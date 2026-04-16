@@ -1,0 +1,74 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pith"
+version = "0.1.0"
+description = "LLM API proxy with prompt optimization & injection protection. Supports 200+ models."
+readme = "README.md"
+license = {text = "Apache-2.0"}
+requires-python = ">=3.9"
+authors = [{name = "PithToken Ltd", email = "hello@pithtoken.ai"}]
+keywords = [
+    "ai", "llm", "proxy", "openai", "anthropic", "optimization",
+    "prompt-compression", "injection-detection", "token-savings",
+    "agent", "mcp", "langchain", "crewai",
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: Apache Software License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Software Development :: Libraries",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+dependencies = [
+    "fastapi>=0.100.0",
+    "uvicorn>=0.23.0",
+    "httpx>=0.24.0",
+]
+
+[project.optional-dependencies]
+tiktoken = ["tiktoken>=0.5.0"]
+keybert = ["keybert>=0.8.0"]
+ml = [
+    "torch>=2.0.0",
+    "transformers>=4.30.0",
+    "llmlingua>=0.2.0",
+    "keybert>=0.8.0",
+]
+dev = [
+    "pytest>=7.0",
+    "pytest-asyncio>=0.21.0",
+    "httpx>=0.24.0",
+    "ruff>=0.1.0",
+]
+
+[project.scripts]
+pith = "pith.cli:main"
+
+[project.urls]
+Homepage = "https://pithtoken.ai"
+Documentation = "https://pithtoken.ai/docs"
+Repository = "https://github.com/pithtkn-tech/pith"
+Issues = "https://github.com/pithtkn-tech/pith/issues"
+Changelog = "https://github.com/pithtkn-tech/pith/blob/main/CHANGELOG.md"
+
+[tool.setuptools.packages.find]
+include = ["pith*"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py39"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "W"]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+testpaths = ["tests"]
