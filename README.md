@@ -160,6 +160,21 @@ For AI-powered features without local ML setup:
 
 ---
 
+## Extensions
+
+Community-built integrations for your favorite tools:
+
+| Extension | Description | Status |
+|-----------|-------------|--------|
+| [VS Code](./extensions/vscode/) | Optimize prompts & detect injection in VS Code | Template |
+| [MCP Server](./extensions/mcp-server/) | Model Context Protocol for agent frameworks | Template |
+| [Cursor](./extensions/cursor/) | Route Cursor AI through Pith | Template |
+| [LangChain](./extensions/langchain/) | Callback handler for chains & agents | Template |
+
+Want to add your tool? See [extensions/README.md](./extensions/README.md).
+
+---
+
 ## Contributing
 
 See [CONTRIBUTING.md](CONTRIBUTING.md).

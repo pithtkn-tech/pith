@@ -50,4 +50,4 @@ logs/
 *.duckdb
 *.duckdb.wal
 data/
-.github/workflows/
+# .github/workflows/ — tracked again (workflow token required)
