@@ -22,8 +22,8 @@ except ImportError:
     BaseCallbackHandler = object  # type: ignore
 
 try:
-    from pith.optimizer import optimize_messages
     from pith.injection import check_injection
+    from pith.optimizer import optimize_messages
 
     PITH_AVAILABLE = True
 except ImportError:

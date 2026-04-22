@@ -24,15 +24,15 @@ import sys
 try:
     from mcp.server import Server
     from mcp.server.stdio import stdio_server
-    from mcp.types import Tool, TextContent
+    from mcp.types import TextContent, Tool
 except ImportError:
     print("MCP SDK not installed. Run: pip install mcp", file=sys.stderr)
     sys.exit(1)
 
 try:
-    from pith.optimizer import optimize_messages
-    from pith.injection import check_injection
     from pith.counter import count_tokens
+    from pith.injection import check_injection
+    from pith.optimizer import optimize_messages
 
     PITH_AVAILABLE = True
 except ImportError:

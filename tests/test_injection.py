@@ -1,11 +1,11 @@
 """Tests for the Pith injection detection — pattern + heuristic layers."""
 
-import sys
 import os
+import sys
+
 sys.path.insert(0, os.path.dirname(os.path.dirname(__file__)))
 
 from pith.injection import check_injection, sanitize_prompt
-
 
 # --- Layer 1: Pattern detection ---
 

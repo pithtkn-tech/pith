@@ -18,12 +18,13 @@ Just swap your base_url:
 """
 
 import time
+
 import httpx
-import json
-from .optimizer import optimize_messages
-from .injection import InjectionResult
-from .counter import count_tokens
+
 from .config import get_settings
+from .counter import count_tokens
+from .injection import InjectionResult
+from .optimizer import optimize_messages
 
 settings = get_settings()
 

@@ -1,7 +1,8 @@
 """Tests for the Pith optimizer — rule-based prompt optimization."""
 
-import sys
 import os
+import sys
+
 sys.path.insert(0, os.path.dirname(os.path.dirname(__file__)))
 
 from pith.optimizer import optimize_messages

@@ -12,12 +12,13 @@ Then point your LLM client to http://localhost:8000/v1
 """
 
 from contextlib import asynccontextmanager
+
 from fastapi import FastAPI, Request
-from fastapi.responses import JSONResponse, StreamingResponse
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.responses import JSONResponse, StreamingResponse
 
 from .config import get_settings
-from .router import proxy_chat_completion, get_client, close_client
+from .router import close_client, get_client, proxy_chat_completion
 
 settings = get_settings()
 
@@ -32,7 +33,7 @@ async def lifespan(app: FastAPI):
     if settings.DEBERTA_ENABLED:
         features.append("DeBERTa ML injection")
 
-    print(f"[Pith] Starting up...")
+    print("[Pith] Starting up...")
     print(f"[Pith] Features: {', '.join(features)}")
     print(f"[Pith] Listening at http://{settings.HOST}:{settings.PORT}")
     print(f"[Pith] Target: {settings.DEFAULT_BASE_URL}")
