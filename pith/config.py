@@ -23,7 +23,8 @@ class Settings:
     INJECTION_ACTION: str = os.getenv("PITH_INJECTION_ACTION", "sanitize")  # sanitize | block | log
 
     # Compression
-    COMPRESSION_MODE: str = os.getenv("PITH_COMPRESSION", "balanced")  # aggressive | balanced | conservative | none
+    # aggressive | balanced | conservative | none
+    COMPRESSION_MODE: str = os.getenv("PITH_COMPRESSION", "balanced")
 
     # Logging
     LOG_LEVEL: str = os.getenv("PITH_LOG_LEVEL", "info")

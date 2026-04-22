@@ -20,10 +20,11 @@ For AI-powered compression (LLMLingua-2, Pith Distill),
 see pithtoken.ai/docs or install: pip install pith[ml]
 """
 
-import re
 import hashlib
-from .injection import check_messages, sanitize_prompt, InjectionResult
+import re
+
 from .config import get_settings
+from .injection import InjectionResult, check_messages, sanitize_prompt
 
 settings = get_settings()
 
@@ -928,4 +929,8 @@ def estimate_savings(original: list[dict], optimized: list[dict]) -> dict:
     opt_chars = sum(len(m.get("content", "") or "") for m in optimized)
     saved = orig_chars - opt_chars
     pct = (saved / orig_chars * 100) if orig_chars > 0 else 0
-    return {"original_chars": orig_chars, "optimized_chars": opt_chars, "saved_percent": round(pct, 1)}
+    return {
+        "original_chars": orig_chars,
+        "optimized_chars": opt_chars,
+        "saved_percent": round(pct, 1),
+    }

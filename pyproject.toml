@@ -69,6 +69,12 @@ target-version = "py39"
 [tool.ruff.lint]
 select = ["E", "F", "I", "W"]
 
+[tool.ruff.lint.per-file-ignores]
+"pith/injection.py" = ["E501"]   # regex patterns are inherently long
+"pith/optimizer.py" = ["E501"]   # replacement rule tuples are inherently long
+"examples/*.py" = ["E501"]       # example code prioritizes readability
+"tests/*.py" = ["E501"]          # test strings can be long
+
 [tool.pytest.ini_options]
 asyncio_mode = "auto"
 testpaths = ["tests"]
