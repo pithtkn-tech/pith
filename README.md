@@ -190,6 +190,24 @@ Want to add your tool? See [extensions/README.md](./extensions/README.md).
 
 ---
 
+## Benchmark — 1,008 Tests
+
+We tested Pith across 1,008 scenarios using GPT-4o-mini and Claude Haiku 4.5, with dual blind LLM judges evaluating quality:
+
+| Metric | Result |
+|--------|--------|
+| Total tests | 1,008 (ISO: 424, E2E: 284, Judge: 300) |
+| Mean compression (full pipeline) | 33.8% |
+| Deep conversation compression (8-15 turns) | 69-77% |
+| Quality score (judge avg, 3.0 = equivalent) | 3.36-3.42/5 |
+| Responses with no quality loss | 87.7% |
+
+Every data point is in [`bench/`](bench/). Full report: [`bench/results/analysis/BENCHMARK_REPORT.md`](bench/results/analysis/BENCHMARK_REPORT.md).
+
+![Compression vs Depth](bench/results/analysis/compression_vs_depth.png)
+
+---
+
 ## Contributing
 
 See [CONTRIBUTING.md](CONTRIBUTING.md).
